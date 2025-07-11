@@ -13,7 +13,7 @@ const ViewGrocery = () => {
                                 <div class="card">
                                     <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTxfJJu4PMZ807zoITI29GS8Pgs-uzwQm8_8-6_ZtN6hszw6z1DiTxHvvEvzmSWy8qUSmah6LwoVQg1YhQzEpFJMSzZeuOCh3iVDrrt0V1VHCfIWyQle09u" class="card-img-top" alt="..."/>
                                         <div class="card-body">
-                                            <h5 class="card-title">Farmley 5-in-1 Seed Mix 200 g Pack of 3</h5>
+                                  <h5 class="card-title">Farmley 5-in-1 Seed Mix 200 g Pack of 3</h5>
                                             <p class="card-text">₹699</p>
                                             <a href="#" class="btn btn-primary">Add to Cart</a>
                                         </div>

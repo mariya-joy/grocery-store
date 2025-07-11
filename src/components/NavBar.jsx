@@ -24,7 +24,7 @@ const NavBar = () => {
               <li class="nav-item">
                 <Link class="nav-link" to="/view">View All </Link>
               </li>
-            </ul>
+            </ul> 
           </div>
         </div>
       </nav>
