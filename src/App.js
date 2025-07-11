@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import AddGrocery from './components/AddGrocery';
+import SearchGrocery from './components/SearchGrocery';
+import DeleteGrocery from './components/DeleteGrocery';
+import ViewGrocery from './components/ViewGrocery';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <BrowserRouter>
+   <Routes>
+    <Route path= "/" element={ <AddGrocery/> }/>
+    <Route path= "/search" element={ <SearchGrocery/> }/>
+    <Route path= "/delete" element={ <DeleteGrocery/> }/>
+    <Route path= "/view" element={ <ViewGrocery/> }/>
+   </Routes>
+   </BrowserRouter>
   );
 }
 
