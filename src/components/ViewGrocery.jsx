@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavBar from './NavBar'
 
 const ViewGrocery = () => {
+    const[products,changeProducts]=useState(
+        [
+           {"productname":" Seed mix","image":"https://m.media-amazon.com/images/I/41M12E3tA+L._SY300_SX300_.jpg","Price":"$699"}, 
+           {"productname":"Cashew","image":"https://m.media-amazon.com/images/I/71KXIA3FEnL._SX679_.jpg","Price":"$669"}, 
+           {"productname":"Dry Fruits","image":"https://m.media-amazon.com/images/I/41STO7tmoCL._SX300_SY300_QL70_FMwebp_.jpg","Price":"$899"}, 
+           {"productname":"Chia seeds","image":"https://m.media-amazon.com/images/I/71vbQzDkQbL._SY879_.jpg","Price":"$599"}, 
+           {"productname":"Farmley Seed mix","image":"https://m.media-amazon.com/images/I/41jhlB1ET9L._SX300_SY300_QL70_FMwebp_.jpg","Price":"$999"}, 
+        ]
+    )
   return (
     <div>
         <NavBar/>
@@ -9,86 +18,23 @@ const ViewGrocery = () => {
                 <div className="row">
                     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                         <div className="row g-3">
+                    { products.map(
+                      (value,index)=>{
+                        return(
                             <div className="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                 <div class="card">
-                                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTxfJJu4PMZ807zoITI29GS8Pgs-uzwQm8_8-6_ZtN6hszw6z1DiTxHvvEvzmSWy8qUSmah6LwoVQg1YhQzEpFJMSzZeuOCh3iVDrrt0V1VHCfIWyQle09u" class="card-img-top" alt="..."/>
+                                    <img src={value.image} class="card-img-top" alt="..."/>
                                         <div class="card-body">
-                                  <h5 class="card-title">Farmley 5-in-1 Seed Mix 200 g Pack of 3</h5>
-                                            <p class="card-text">₹699</p>
+                                  <h5 class="card-title">{value.productname}</h5>
+                                            <p class="card-text">{value.price}</p>
                                             <a href="#" class="btn btn-primary">Add to Cart</a>
                                         </div>
                                 </div>
                             </div>
-                            <div className="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                                 <div class="card">
-                                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTxfJJu4PMZ807zoITI29GS8Pgs-uzwQm8_8-6_ZtN6hszw6z1DiTxHvvEvzmSWy8qUSmah6LwoVQg1YhQzEpFJMSzZeuOCh3iVDrrt0V1VHCfIWyQle09u" class="card-img-top" alt="..."/>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Farmley 5-in-1 Seed Mix 200 g Pack of 3</h5>
-                                            <p class="card-text">₹699</p>
-                                            <a href="#" class="btn btn-primary">Add to Cart</a>
-                                        </div>
-                                </div>
-                            </div>
-                            <div className="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                                 <div class="card">
-                                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTxfJJu4PMZ807zoITI29GS8Pgs-uzwQm8_8-6_ZtN6hszw6z1DiTxHvvEvzmSWy8qUSmah6LwoVQg1YhQzEpFJMSzZeuOCh3iVDrrt0V1VHCfIWyQle09u" class="card-img-top" alt="..."/>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Farmley 5-in-1 Seed Mix 200 g Pack of 3</h5>
-                                            <p class="card-text">₹699</p>
-                                            <a href="#" class="btn btn-primary">Add to Cart</a>
-                                        </div>
-                                </div>
-                            </div>
-                            <div className="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                                 <div class="card">
-                                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTxfJJu4PMZ807zoITI29GS8Pgs-uzwQm8_8-6_ZtN6hszw6z1DiTxHvvEvzmSWy8qUSmah6LwoVQg1YhQzEpFJMSzZeuOCh3iVDrrt0V1VHCfIWyQle09u" class="card-img-top" alt="..."/>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Farmley 5-in-1 Seed Mix 200 g Pack of 3</h5>
-                                            <p class="card-text">₹699</p>
-                                            <a href="#" class="btn btn-primary">Add to Cart</a>
-                                        </div>
-                                </div>
-                            </div>
-                            <div className="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                                 <div class="card">
-                                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTxfJJu4PMZ807zoITI29GS8Pgs-uzwQm8_8-6_ZtN6hszw6z1DiTxHvvEvzmSWy8qUSmah6LwoVQg1YhQzEpFJMSzZeuOCh3iVDrrt0V1VHCfIWyQle09u" class="card-img-top" alt="..."/>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Farmley 5-in-1 Seed Mix 200 g Pack of 3</h5>
-                                            <p class="card-text">₹699</p>
-                                            <a href="#" class="btn btn-primary">Add to Cart</a>
-                                        </div>
-                                </div>
-                            </div>
-                            <div className="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                                 <div class="card">
-                                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTxfJJu4PMZ807zoITI29GS8Pgs-uzwQm8_8-6_ZtN6hszw6z1DiTxHvvEvzmSWy8qUSmah6LwoVQg1YhQzEpFJMSzZeuOCh3iVDrrt0V1VHCfIWyQle09u" class="card-img-top" alt="..."/>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Farmley 5-in-1 Seed Mix 200 g Pack of 3</h5>
-                                            <p class="card-text">₹699</p>
-                                            <a href="#" class="btn btn-primary">Add to Cart</a>
-                                        </div>
-                                </div>
-                            </div>
-                            <div className="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                                 <div class="card">
-                                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTxfJJu4PMZ807zoITI29GS8Pgs-uzwQm8_8-6_ZtN6hszw6z1DiTxHvvEvzmSWy8qUSmah6LwoVQg1YhQzEpFJMSzZeuOCh3iVDrrt0V1VHCfIWyQle09u" class="card-img-top" alt="..."/>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Farmley 5-in-1 Seed Mix 200 g Pack of 3</h5>
-                                            <p class="card-text">₹699</p>
-                                            <a href="#" class="btn btn-primary">Add to Cart</a>
-                                        </div>
-                                </div>
-                            </div>
-                            <div className="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                                 <div class="card">
-                                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTxfJJu4PMZ807zoITI29GS8Pgs-uzwQm8_8-6_ZtN6hszw6z1DiTxHvvEvzmSWy8qUSmah6LwoVQg1YhQzEpFJMSzZeuOCh3iVDrrt0V1VHCfIWyQle09u" class="card-img-top" alt="..."/>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Farmley 5-in-1 Seed Mix 200 g Pack of 3</h5>
-                                            <p class="card-text">₹699</p>
-                                            <a href="#" class="btn btn-primary">Add to Cart</a>
-                                        </div>
-                                </div>
-                            </div>
+                        )
+                      } 
+                    ) }
+                           
                         </div>
                     </div>
                 </div>
